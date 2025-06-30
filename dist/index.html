@@ -5,90 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>株式会社G.O.D</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: "Arial", sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
       color: white;
-      background: url('god-top.jpg') no-repeat center center/cover;
+      background: url('god-top.jpg') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
     }
 
     .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      min-height: 100vh;
+      padding: 100px 20px 60px;
       text-align: center;
     }
 
     h1 {
-      font-size: 3em;
-      margin: 0.2em 0 0.1em;
+      font-size: 2.8em;
+      margin-bottom: 10px;
     }
 
-    .tagline {
-      font-size: 1.2em;
-      margin-bottom: 1em;
+    h2 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
     }
 
-    .highlight {
-      background-color: rgba(255, 215, 0, 0.3);
-      display: inline-block;
-      padding: 0.2em 0.5em;
-      border-radius: 10px;
-    }
-
-    .button-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 2em;
-    }
-
-    .nav-button {
-      background-color: rgba(255, 255, 255, 0.15);
-      border: 2px solid #fff;
-      padding: 1em;
-      border-radius: 15px;
+    .catch {
       font-size: 1.1em;
-      width: 130px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      margin-top: 15px;
+      margin-bottom: 25px;
+      font-weight: bold;
+      color: #ffe;
+      text-shadow: 0 0 5px #000;
     }
 
-    .nav-button:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-      transform: scale(1.05);
+    .banner {
+      background-color: rgba(255, 215, 0, 0.8);
+      color: black;
+      padding: 6px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      display: inline-block;
     }
 
-    footer {
-      background-color: black;
-      text-align: center;
-      padding: 20px;
+    p {
+      font-size: 0.95em;
+      margin: 0 auto 25px;
+      max-width: 90%;
+      line-height: 1.5;
     }
 
-    img.full-width {
-      width: 100%;
-      display: block;
+    .button-box {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .button-box img {
+      width: 260px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2em; }
+      h2 { font-size: 1.1em; }
+      .catch { font-size: 1em; }
+      .button-box img { width: 88%; }
     }
   </style>
 </head>
 <body>
   <div class="overlay">
     <h1>株式会社G.O.D</h1>
-    <div class="tagline">神奈川・東京を中心とした足場工事のスペシャリスト</div>
-    <div class="highlight">施工実績2,000件以上！信頼と実績を積み重ねてきました</div>
-    <p style="margin-top: 1em;">「現場第一主義」— 社長自らが全ての現場に目を通し、安心・安全・信頼を届けます。</p>
+    <h2>神奈川・東京を中心とした足場工事のスペシャリスト</h2>
+    <div class="catch">神の手による足場工事──それがG.O.D</div>
+    <div class="banner">施工実績2,000件以上！信頼と実績を積み重ねてきました</div>
+    <p>「現場第一主義」― 社長自らが全ての現場に目を通し、安心・安全・信頼を届けます。</p>
 
-    <div class="button-container">
-      <div class="nav-button" onclick="location.href='btn-company.jpg'">会社情報</div>
-      <div class="nav-button" onclick="location.href='btn-area.jpg'">施工エリア</div>
-      <div class="nav-button" onclick="location.href='btn-recruit.jpg'">求人情報</div>
-      <div class="nav-button" onclick="location.href='btn-jirei.jpg'">施工事例</div>
+    <div class="button-box">
+      <a href="#company"><img src="btn-company.jpg" alt="会社情報"></a>
+      <a href="#area"><img src="btn-area.jpg" alt="施工エリア"></a>
+      <a href="#recruit"><img src="btn-kyujin.jpg" alt="求人情報"></a>
+      <a href="#works"><img src="btn-jirei.jpg" alt="施工事例"></a>
     </div>
   </div>
-
-  <footer>
-    <img src="company-footer.jpg" alt="会社情報" class="full-width" />
-  </footer>
 </body>
 </html>
