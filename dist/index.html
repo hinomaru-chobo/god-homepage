@@ -2,81 +2,63 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>株式会社G.O.D</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #000;
-      color: #fff;
+      font-family: "Arial", sans-serif;
+      color: white;
+      background: url("god-top.jpg") no-repeat center center fixed;
+      background-size: cover;
     }
-
     header {
-      background: url('god-top.jpg') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       text-align: center;
-      padding: 0 1em;
-    }
-
-    header h1 {
-      font-size: 2.2em;
-      font-weight: bold;
+      padding-top: 40vh;
       background-color: rgba(0, 0, 0, 0.6);
-      padding: 0.3em 0.6em;
-      border-radius: 0.3em;
+      padding-bottom: 2rem;
     }
-
-    header p {
-      margin-top: 1em;
-      font-size: 1em;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 0.5em 1em;
-      border-radius: 0.3em;
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
     }
-
+    p {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
     .highlight {
-      background-color: yellow;
+      background: yellow;
       color: black;
       font-weight: bold;
-      padding: 0.4em 1em;
-      border-radius: 0.3em;
-      margin-top: 1em;
-      display: inline-block;
+      padding: 0.5rem;
+      margin-top: 1rem;
     }
-
-    .section {
-      padding: 2em 1em;
-      text-align: center;
-    }
-
-    .section img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 1em;
-      margin-top: 1em;
-    }
-
-    .label {
-      font-size: 1.8em;
+    .god-message {
+      font-size: 1.2rem;
+      margin-top: 1rem;
       font-weight: bold;
-      margin-top: 0.8em;
+      color: #ffd700;
     }
-
+    .section {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: black;
+    }
+    .label {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .section img {
+      width: 90%;
+      max-width: 400px;
+      border-radius: 12px;
+    }
     footer {
-      background-color: #111;
-      padding: 2em 1em;
+      background-color: black;
       text-align: center;
     }
-
     footer img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 1em;
+      width: 100%;
     }
   </style>
 </head>
@@ -85,26 +67,32 @@
     <h1>株式会社G.O.D</h1>
     <p>神奈川・東京を中心とした足場工事のスペシャリスト</p>
     <div class="highlight">施工実績2,000件以上！信頼と実績を積み重ねてきました</div>
-    <p>「現場第一主義」——社長自らが全ての現場に目を通し、安心・安全・信頼を届けます。</p>
+    <p>「現場第一主義」──社長自らが全ての現場に目を通し、安心・安全・信頼を届けます。</p>
+    <div class="god-message">神の手による、妥協なき施工。</div>
   </header>
 
   <div class="section">
     <div class="label">会社情報</div>
-    <img src="god-company.jpg" alt="会社情報">
+    <img src="btn-company.jpg" alt="会社情報" />
   </div>
 
   <div class="section">
     <div class="label">施工エリア</div>
-    <img src="god-area.jpg" alt="施工エリア">
+    <img src="btn-area.jpg" alt="施工エリア" />
   </div>
 
   <div class="section">
     <div class="label">施工事例</div>
-    <img src="god-example.jpg" alt="施工事例">
+    <img src="btn-jirei.jpg" alt="施工事例" />
+  </div>
+
+  <div class="section">
+    <div class="label">求人情報</div>
+    <img src="btn-recruit.jpg" alt="求人情報" />
   </div>
 
   <footer>
-    <img src="company-footer.jpg" alt="会社フッター情報">
+    <img src="company-footer.jpg" alt="会社フッター情報" />
   </footer>
 </body>
 </html>
