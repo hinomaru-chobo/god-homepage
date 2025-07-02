@@ -1,137 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>株式会社G.O.D</title>
   <style>
     body {
       margin: 0;
-      font-family: "Arial", sans-serif;
-      background-color: black;
+      font-family: sans-serif;
+      background: black;
       color: white;
-      overflow-x: hidden;
-    }
-
-    header {
-      background-image: url('god-top.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      position: relative;
-      padding-bottom: 140px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2em;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px 30px;
-      border-radius: 10px;
-      animation: fadeIn 2s ease-in-out;
     }
 
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .btn {
-      position: relative;
-      display: block;
-      text-align: center;
+      gap: 10px;
+      padding: 20px;
     }
 
     .btn img {
       width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 16px;
+      height: auto;
       display: block;
-    }
-
-    .btn span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 1.2em;
-      font-weight: bold;
-      text-shadow: 1px 1px 3px #000;
+      border-radius: 16px;
+      background-color: transparent;
     }
 
     footer {
-      background-image: url('company-footer.jpg');
+      background-image: url("company-footer.jpg");
       background-size: cover;
       background-position: center;
-      padding: 60px 20px;
-      text-align: center;
-      color: white;
-    }
-
-    footer h2 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-
-    footer p {
-      font-size: 1em;
-      margin: 0.3em 0;
-    }
-
-    footer small {
-      display: block;
-      margin-top: 20px;
-      font-size: 0.8em;
-      opacity: 0.8;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      height: 300px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>施工実績2000件以上、<br>神の手による信頼と実績</h1>
-  </header>
-
   <div class="grid">
     <a href="company.html" class="btn">
       <img src="btn-company.jpg" alt="会社情報">
-      <span>会社情報</span>
     </a>
     <a href="area.html" class="btn">
       <img src="btn-area.jpg" alt="施工エリア">
-      <span>施工エリア</span>
     </a>
     <a href="works.html" class="btn">
-      <img src="btn-works.jpg" alt="施工事例">
-      <span>施工事例</span>
+      <img src="btn-jirei.jpg" alt="施工事例">
     </a>
     <a href="recruit.html" class="btn">
       <img src="btn-recruit.jpg" alt="求人情報">
-      <span>求人情報</span>
     </a>
   </div>
 
-  <footer>
-    <h2>株式会社G.O.D</h2>
-    <p>〒252-0013 神奈川県座間市栗原2722-14</p>
-    <p>代表：神杉 明</p>
-    <p>TEL：080-1363-2508</p>
-    <small>© 2025 株式会社G.O.D. All rights reserved.</small>
-  </footer>
+  <footer></footer>
 
 </body>
 </html>
