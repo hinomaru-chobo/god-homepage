@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>株式会社G.O.D</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <style>
     body, html {
       margin: 0;
@@ -13,6 +12,7 @@
       font-family: sans-serif;
       color: white;
       overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -25,11 +25,12 @@
     .overlay {
       background-color: rgba(0, 0, 0, 0.4);
       min-height: 100vh;
-      padding: 30px 20px 60px;
+      padding: 100px 20px 60px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       text-align: center;
+      animation: fadeIn 2s ease-in;
     }
 
     h1 {
@@ -50,12 +51,13 @@
       justify-content: center;
       margin-top: 30px;
       gap: 15px;
+      animation: fadeInUp 2s ease-in-out;
     }
 
     .button-container img {
-      width: 120px;
+      width: 140px;
       height: auto;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.5);
       transition: transform 0.3s;
     }
@@ -70,6 +72,28 @@
       font-size: 0.9em;
       color: #ccc;
     }
+
+    .footer-image {
+      width: 100%;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -82,9 +106,11 @@
     <div class="button-container">
       <a href="#company"><img src="btn-company.jpg" alt="会社情報"></a>
       <a href="#area"><img src="btn-area.jpg" alt="施工エリア"></a>
-      <a href="#contact"><img src="btn-jirei.jpg" alt="お問い合わせ"></a>
+      <a href="#jirei"><img src="btn-jirei.jpg" alt="施工事例"></a>
       <a href="#recruit"><img src="btn-recruit.jpg" alt="求人情報"></a>
     </div>
+
+    <img class="footer-image" src="company-footer.jpg" alt="会社フッター画像">
   </div>
 
   <footer>
