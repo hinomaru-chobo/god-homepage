@@ -1,10 +1,98 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>株式会社G.O.D</title>
-  <link rel="stylesheet" href="Style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: sans-serif;
+      color: white;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: url("god-top.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      min-height: 100vh;
+      padding: 100px 20px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.8;
+      margin: 5px 0;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 15px;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .button-container img {
+      width: 140px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .button-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .footer-image {
+      width: 100%;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="overlay">
@@ -12,16 +100,15 @@
     <p>施工実績2000件以上、あらゆるシチュエーションに対応してきた経験を活かし、</p>
     <p>低層住宅を中心に安心・安全な足場をご提供します。</p>
     <p><strong>―― 神の手による、信頼と実績。</strong></p>
-    <p>どんな現場も “任せてよかった” と思わせる。</p>
 
     <div class="button-container">
-      <a href="#company"><img src="btn-company.jpg" alt="会社情報" /></a>
-      <a href="#area"><img src="btn-area.jpg" alt="施工エリア" /></a>
-      <a href="#jirei"><img src="btn-jirei.jpg" alt="施工事例" /></a>
-      <a href="#recruit"><img src="btn-recruit.jpg" alt="求人情報" /></a>
+      <a href="#company"><img src="btn-company.jpg" alt="会社情報"></a>
+      <a href="#area"><img src="btn-area.jpg" alt="施工エリア"></a>
+      <a href="#jirei"><img src="btn-jirei.jpg" alt="施工事例"></a>
+      <a href="#recruit"><img src="btn-recruit.jpg" alt="求人情報"></a>
     </div>
 
-    <img class="footer-image" src="company-footer.jpg" alt="会社フッター画像" />
+    <img class="footer-image" src="company-footer.jpg" alt="会社フッター画像">
   </div>
 
   <footer>
