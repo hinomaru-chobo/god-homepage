@@ -7,53 +7,108 @@
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: black;
-      color: white;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
     }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url("god-top.jpg") center center / cover no-repeat;
+    }
+    .hero-text {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4);
       padding: 20px;
+      border-radius: 8px;
     }
-
+    .hero-text h1 {
+      font-size: 2em;
+      margin: 0 0 10px;
+    }
+    .hero-text p {
+      font-size: 1em;
+      margin: 5px 0;
+      line-height: 1.6;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+      gap: 15px;
+    }
+    .btn {
+      width: 45%;
+      max-width: 200px;
+      border-radius: 20px;
+      overflow: hidden;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      position: relative;
+    }
     .btn img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 16px;
-      background-color: transparent;
     }
-
+    .btn span {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 1.1em;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px 0;
+    }
     footer {
-      background-image: url("company-footer.jpg");
-      background-size: cover;
-      background-position: center;
-      height: 300px;
-      margin-top: 30px;
+      background: #000;
+      color: #aaa;
+      font-size: 0.75em;
+      text-align: center;
+      padding: 15px 10px 30px;
     }
   </style>
 </head>
 <body>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>株式会社G.O.D</h1>
+      <p>施工実績2000件以上、あらゆるシチュエーションに対応してきた経験を活かし、</p>
+      <p>低層住宅を中心に安心・安全な足場をご提供します。</p>
+      <p>―― 神の手による、信頼と実績。</p>
+    </div>
+  </div>
 
-  <div class="grid">
+  <div class="buttons">
     <a href="company.html" class="btn">
-      <img src="btn-company.jpg" alt="会社情報">
+      <img src="company.jpg" alt="会社情報">
+      <span>会社情報</span>
     </a>
     <a href="area.html" class="btn">
-      <img src="btn-area.jpg" alt="施工エリア">
+      <img src="area.jpg" alt="施工エリア">
+      <span>施工エリア</span>
     </a>
     <a href="works.html" class="btn">
-      <img src="btn-jirei.jpg" alt="施工事例">
+      <img src="works.jpg" alt="施工事例">
+      <span>施工事例</span>
     </a>
     <a href="recruit.html" class="btn">
-      <img src="btn-recruit.jpg" alt="求人情報">
+      <img src="recruit.jpg" alt="求人情報">
+      <span>求人情報</span>
     </a>
   </div>
 
-  <footer></footer>
-
+  <footer>
+    © 2025 株式会社G.O.D. All rights reserved.
+  </footer>
 </body>
-</html>
+</html>2025
