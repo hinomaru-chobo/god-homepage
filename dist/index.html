@@ -1,108 +1,167 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>株式会社G.O.D</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: sans-serif;
-      color: white;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>株式会社G.O.D</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    body {
-      background-image: url("god-top.jpg");
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
+      body {
+        font-family: "Arial", sans-serif;
+        background-image: url('god-top.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: white;
+        text-align: center;
+      }
 
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.4);
-      min-height: 100vh;
-      padding: 100px 20px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      text-align: center;
-      animation: fadeIn 2s ease-in;
-    }
+      .hero {
+        padding-top: 200px;
+        padding-bottom: 20px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
 
-    h1 {
-      font-size: 2.4em;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
+      .hero h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+      }
 
-    p {
-      font-size: 1em;
-      line-height: 1.8;
-      margin: 5px 0;
-    }
+      .hero p {
+        font-size: 1.1rem;
+        margin: 0.5rem auto;
+        width: 90%;
+        max-width: 600px;
+        line-height: 1.6;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 1rem;
+        border-radius: 10px;
+      }
 
-    .button-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 30px;
-      gap: 15px;
-    }
+      .button-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 2rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
 
-    .button-container img {
-      width: 140px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
-    }
+      .button {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 0;
+        border-radius: 20px;
+        overflow: hidden;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+      }
 
-    .button-container img:hover {
-      transform: scale(1.05);
-    }
+      .button img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
 
-    footer {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #ccc;
-    }
+      .button span {
+        display: block;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
 
-    .footer-image {
-      width: 100%;
-      margin-top: 40px;
-      animation: fadeIn 2s ease-out;
-    }
+      footer {
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 0.9rem;
+      }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay">
-    <h1>株式会社G.O.D</h1>
-    <p>施工実績2000件以上、あらゆるシチュエーションに対応してきた経験を活かし、</p>
-    <p>低層住宅を中心に安心・安全な足場をご提供します。</p>
-    <p><strong>―― 神の手による、信頼と実績。</strong></p>
+      .footer-box {
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 1.5rem 1rem;
+        margin: 80px 1rem 1rem;
+        border-radius: 15px;
+      }
 
-    <div class="button-container">
-      <a href="#company"><img src="btn-company.jpg" alt="会社情報"></a>
-      <a href="#area"><img src="btn-area.jpg" alt="施工エリア"></a>
-      <a href="#jirei"><img src="btn-jirei.jpg" alt="施工事例"></a>
-      <a href="#recruit"><img src="btn-recruit.jpg" alt="求人情報"></a>
+      .footer-box h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-box p {
+        font-size: 1.1rem;
+        margin: 0.2rem 0;
+      }
+
+      @media (max-width: 600px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .button-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-box h2 {
+          font-size: 1.6rem;
+        }
+
+        .footer-box p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>株式会社G.O.D</h1>
+      <p>施工実績2000件以上、あらゆるシチュエーションに対応してきた経験を活かし、<br>低層住宅を中心に安心・安全な足場をご提供します。<br><br>―― 神の手による、信頼と実績。</p>
     </div>
 
-    <img class="footer-image" src="company-footer.jpg" alt="会社フッター画像">
-  </div>
+    <div class="button-grid">
+      <a class="button" href="company.html">
+        <img src="btn-company.jpg" alt="会社情報" />
+        <span>会社情報</span>
+      </a>
+      <a class="button" href="area.html">
+        <img src="btn-area.jpg" alt="施工エリア" />
+        <span>施工エリア</span>
+      </a>
+      <a class="button" href="works.html">
+        <img src="btn-works.jpg" alt="施工事例" />
+        <span>施工事例</span>
+      </a>
+      <a class="button" href="recruit.html">
+        <img src="btn-recruit.jpg" alt="求人情報" />
+        <span>求人情報</span>
+      </a>
+    </div>
 
-  <footer>
-    &copy; 2025 株式会社G.O.D. All rights reserved.
-  </footer>
-</body>
+    <div class="footer-box">
+      <h2>株式会社 G.O.D</h2>
+      <p>座間市栗原2722-14</p>
+      <p>神杉 明</p>
+      <p>080-1363-2508</p>
+    </div>
+
+    <footer>
+      © 2025 株式会社G.O.D. All rights reserved.
+    </footer>
+  </body>
 </html>
