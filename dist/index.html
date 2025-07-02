@@ -1,124 +1,94 @@
-<!DOCTYPE html><html lang="ja"><head>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>株式会社G.O.D</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <style>
-    * {
+    body, html {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Noto Sans JP', sans-serif;
-    }body, html {
-  height: 100%;
-  color: white;
-  background: url('god-top.jpg') no-repeat center center fixed;
-  background-size: cover;
-  overflow-x: hidden;
-}
+      height: 100%;
+      font-family: sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 180px 20px 60px;
-  text-align: center;
-  animation: fadeIn 2s ease-in-out;
-}
+    body {
+      background-image: url("god-top.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
 
-.overlay h1 {
-  font-size: 3em;
-  margin-bottom: 0.5em;
-  animation: slideIn 2s ease-in-out;
-}
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      min-height: 100vh;
+      padding: 30px 20px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
 
-.overlay p {
-  font-size: 1.2em;
-  max-width: 800px;
-  margin: 0.5em auto;
-}
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin: 40px 0;
-  flex-wrap: wrap;
-}
+    p {
+      font-size: 1em;
+      line-height: 1.8;
+      margin: 5px 0;
+    }
 
-nav a {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 14px 28px;
-  border-radius: 12px;
-  font-weight: bold;
-  color: #000;
-  text-decoration: none;
-  transition: all 0.3s;
-  font-size: 1.1em;
-}
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 15px;
+    }
 
-nav a:hover {
-  background: rgba(255, 255, 255, 0.95);
-  transform: scale(1.05);
-}
+    .button-container img {
+      width: 120px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
 
-.button-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin: 30px auto;
-  max-width: 900px;
-}
+    .button-container img:hover {
+      transform: scale(1.05);
+    }
 
-.button-row img {
-  width: 160px;
-  height: auto;
-  border-radius: 12px;
-  transition: transform 0.3s;
-}
-
-.button-row img:hover {
-  transform: scale(1.05);
-}
-
-.catch-copy {
-  font-size: 1.5em;
-  margin-top: 30px;
-  animation: fadeInUp 1.5s ease-in-out;
-}
-
-.footer-image {
-  width: 100%;
-  display: block;
-  margin-top: 60px;
-}
-
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-@keyframes slideIn {
-  0% {opacity: 0; transform: translateY(-30px);}
-  100% {opacity: 1; transform: translateY(0);}
-}
-
-@keyframes fadeInUp {
-  0% {opacity: 0; transform: translateY(30px);}
-  100% {opacity: 1; transform: translateY(0);}
-}
-
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #ccc;
+    }
   </style>
-</head><body>
+</head>
+<body>
   <div class="overlay">
     <h1>株式会社G.O.D</h1>
-    <p>施工実績2000件以上、あらゆるシチュエーションに対応してきた経験を活かし、<br>低層住宅を中心に安心・安全な足場をご提供します。</p>
-    <p class="catch-copy">── 神の手による、信頼と実績。</p><div class="button-row">
-  <a href="#company"><img src="god-company-button.jpg" alt="会社情報"></a>
-  <a href="#area"><img src="god-area-button.jpg" alt="施工エリア"></a>
-  <a href="#contact"><img src="god-contact-button.jpg" alt="お問い合わせ"></a>
-  <a href="#recruit"><img src="god-recruit-button.jpg" alt="求人情報"></a>
-</div>
+    <p>施工実績2000件以上、あらゆるシチュエーションに対応してきた経験を活かし、</p>
+    <p>低層住宅を中心に安心・安全な足場をご提供します。</p>
+    <p><strong>―― 神の手による、信頼と実績。</strong></p>
 
-  </div>  <img src="company-footer.jpg" alt="会社情報" class="footer-image">
-</body></html>
+    <div class="button-container">
+      <a href="#company"><img src="btn-company.jpg" alt="会社情報"></a>
+      <a href="#area"><img src="btn-area.jpg" alt="施工エリア"></a>
+      <a href="#contact"><img src="btn-jirei.jpg" alt="お問い合わせ"></a>
+      <a href="#recruit"><img src="btn-recruit.jpg" alt="求人情報"></a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 株式会社G.O.D. All rights reserved.
+  </footer>
+</body>
+</html>
