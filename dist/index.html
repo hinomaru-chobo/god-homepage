@@ -1,98 +1,124 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html><html lang="ja"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>株式会社G.O.D</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: "Arial", sans-serif;
-      color: white;
-      background: url("god-top.jpg") no-repeat center center fixed;
-      background-size: cover;
-    }
-    header {
-      text-align: center;
-      padding-top: 40vh;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding-bottom: 2rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    p {
-      margin: 1rem 0;
-      font-size: 1.1rem;
-    }
-    .highlight {
-      background: yellow;
-      color: black;
-      font-weight: bold;
-      padding: 0.5rem;
-      margin-top: 1rem;
-    }
-    .god-message {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      font-weight: bold;
-      color: #ffd700;
-    }
-    .section {
-      text-align: center;
-      padding: 3rem 1rem;
-      background-color: black;
-    }
-    .label {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .section img {
-      width: 90%;
-      max-width: 400px;
-      border-radius: 12px;
-    }
-    footer {
-      background-color: black;
-      text-align: center;
-    }
-    footer img {
-      width: 100%;
-    }
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans JP', sans-serif;
+    }body, html {
+  height: 100%;
+  color: white;
+  background: url('god-top.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 180px 20px 60px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.overlay h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  animation: slideIn 2s ease-in-out;
+}
+
+.overlay p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0.5em auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 1.1em;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.05);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.button-row img {
+  width: 160px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.button-row img:hover {
+  transform: scale(1.05);
+}
+
+.catch-copy {
+  font-size: 1.5em;
+  margin-top: 30px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.footer-image {
+  width: 100%;
+  display: block;
+  margin-top: 60px;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes slideIn {
+  0% {opacity: 0; transform: translateY(-30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
   </style>
-</head>
-<body>
-  <header>
+</head><body>
+  <div class="overlay">
     <h1>株式会社G.O.D</h1>
-    <p>神奈川・東京を中心とした足場工事のスペシャリスト</p>
-    <div class="highlight">施工実績2,000件以上！信頼と実績を積み重ねてきました</div>
-    <p>「現場第一主義」──社長自らが全ての現場に目を通し、安心・安全・信頼を届けます。</p>
-    <div class="god-message">神の手による、妥協なき施工。</div>
-  </header>
+    <p>施工実績2000件以上、あらゆるシチュエーションに対応してきた経験を活かし、<br>低層住宅を中心に安心・安全な足場をご提供します。</p>
+    <p class="catch-copy">── 神の手による、信頼と実績。</p><div class="button-row">
+  <a href="#company"><img src="god-company-button.jpg" alt="会社情報"></a>
+  <a href="#area"><img src="god-area-button.jpg" alt="施工エリア"></a>
+  <a href="#contact"><img src="god-contact-button.jpg" alt="お問い合わせ"></a>
+  <a href="#recruit"><img src="god-recruit-button.jpg" alt="求人情報"></a>
+</div>
 
-  <div class="section">
-    <div class="label">会社情報</div>
-    <img src="btn-company.jpg" alt="会社情報" />
-  </div>
-
-  <div class="section">
-    <div class="label">施工エリア</div>
-    <img src="btn-area.jpg" alt="施工エリア" />
-  </div>
-
-  <div class="section">
-    <div class="label">施工事例</div>
-    <img src="btn-jirei.jpg" alt="施工事例" />
-  </div>
-
-  <div class="section">
-    <div class="label">求人情報</div>
-    <img src="btn-recruit.jpg" alt="求人情報" />
-  </div>
-
-  <footer>
-    <img src="company-footer.jpg" alt="会社フッター情報" />
-  </footer>
-</body>
-</html>
+  </div>  <img src="company-footer.jpg" alt="会社情報" class="footer-image">
+</body></html>
