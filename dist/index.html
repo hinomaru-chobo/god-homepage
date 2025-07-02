@@ -16,8 +16,10 @@
     }
 
     body {
-      background: #000 url("god-top.webp") no-repeat center center fixed;
+      background-image: url("god-top.jpg");
       background-size: cover;
+      background-position: center;
+      background-attachment: scroll; /* ←軽量化ポイント① */
     }
 
     .overlay {
@@ -35,14 +37,12 @@
       font-size: 2.4em;
       margin-bottom: 20px;
       font-weight: bold;
-      animation: fadeIn 2s ease-in;
     }
 
     p {
       font-size: 1em;
       line-height: 1.8;
       margin: 5px 0;
-      animation: fadeIn 2s ease-in;
     }
 
     .button-container {
@@ -53,15 +53,17 @@
       gap: 15px;
     }
 
-    .button-container picture {
-      display: inline-block;
-    }
-
     .button-container img {
       width: 140px;
       height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .button-container img:hover {
+      transform: scale(1.05);
+      will-change: transform; /* ←軽量化ポイント② */
     }
 
     footer {
@@ -74,6 +76,7 @@
     .footer-image {
       width: 100%;
       margin-top: 40px;
+      animation: fadeIn 2s ease-out;
     }
 
     @keyframes fadeIn {
@@ -90,36 +93,13 @@
     <p><strong>―― 神の手による、信頼と実績。</strong></p>
 
     <div class="button-container">
-      <a href="#company">
-        <picture>
-          <source srcset="btn-company.webp" type="image/webp">
-          <img src="btn-company.jpg" alt="会社情報" loading="lazy" width="140">
-        </picture>
-      </a>
-      <a href="#area">
-        <picture>
-          <source srcset="btn-area.webp" type="image/webp">
-          <img src="btn-area.jpg" alt="施工エリア" loading="lazy" width="140">
-        </picture>
-      </a>
-      <a href="#jirei">
-        <picture>
-          <source srcset="btn-jirei.webp" type="image/webp">
-          <img src="btn-jirei.jpg" alt="施工事例" loading="lazy" width="140">
-        </picture>
-      </a>
-      <a href="#recruit">
-        <picture>
-          <source srcset="btn-recruit.webp" type="image/webp">
-          <img src="btn-recruit.jpg" alt="求人情報" loading="lazy" width="140">
-        </picture>
-      </a>
+      <a href="#company"><img src="btn-company.jpg" loading="lazy" alt="会社情報"></a>
+      <a href="#area"><img src="btn-area.jpg" loading="lazy" alt="施工エリア"></a>
+      <a href="#jirei"><img src="btn-jirei.jpg" loading="lazy" alt="施工事例"></a>
+      <a href="#recruit"><img src="btn-recruit.jpg" loading="lazy" alt="求人情報"></a>
     </div>
 
-    <picture>
-      <source srcset="company-footer.webp" type="image/webp">
-      <img class="footer-image" src="company-footer.jpg" alt="会社フッター画像" loading="lazy">
-    </picture>
+    <img class="footer-image" src="company-footer.jpg" loading="lazy" alt="会社フッター画像">
   </div>
 
   <footer>
