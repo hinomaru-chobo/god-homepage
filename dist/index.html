@@ -19,6 +19,7 @@
       background-image: url("god-top.jpg");
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       background-attachment: scroll; /* ←軽量化ポイント① */
     }
 
@@ -83,6 +84,27 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    /* ===== ▼▼▼ PC表示向け調整 ▼▼▼ ===== */
+    @media (min-width: 1024px) {
+      body {
+        background-position: center top;
+        background-size: 100% auto;
+      }
+
+      .overlay {
+        padding: 140px 80px 80px;
+      }
+
+      .button-container {
+        gap: 30px;
+      }
+
+      .button-container img {
+        width: 180px;
+      }
+    }
+    /* ===== ▲▲▲ PC表示向け調整 ▲▲▲ ===== */
   </style>
 </head>
 <body>
