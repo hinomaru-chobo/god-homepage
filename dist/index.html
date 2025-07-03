@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!DOCTYPE html><html lang="ja">
 <head>
   <meta charset="UTF-8">
   <title>株式会社G.O.D</title>
@@ -13,165 +12,129 @@
       color: white;
       overflow-x: hidden;
       scroll-behavior: smooth;
-    }
+    }body {
+  background-image: url("god-top.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
 
-    body {
-      background-image: url("god-top.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-    }
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  min-height: 100vh;
+  padding: 100px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
 
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.4);
-      min-height: 100vh;
-      padding: 100px 20px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      text-align: center;
-    }
+h1, p, .button-container img {
+  opacity: 0;
+  transform: translateY(30px);
+}
 
-    h1 {
-      font-size: 2.4em;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
-    p {
-      font-size: 1em;
-      line-height: 1.8;
-      margin: 5px 0;
-    }
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
 
-    .button-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 30px;
-      gap: 15px;
-    }
+p {
+  font-size: 1em;
+  line-height: 1.8;
+  margin: 5px 0;
+}
 
-    .button-container img {
-      width: 140px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    }
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 15px;
+}
 
-    footer {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #ccc;
-    }
+.button-container img {
+  width: 140px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
 
-    .footer-image {
-      width: 100%;
-      margin-top: 40px;
-    }
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #ccc;
+}
 
-    @media (min-width: 1024px) {
-      body {
-        background-position: center top;
-        background-size: 100% auto;
-      }
+.footer-image {
+  width: 100%;
+  margin-top: 40px;
+}
 
-      .overlay {
-        padding: 140px 80px 80px;
-      }
+@media (min-width: 1024px) {
+  body {
+    background-position: center top;
+    background-size: 100% auto;
+  }
 
-      .button-container {
-        gap: 30px;
-      }
+  .overlay {
+    padding: 140px 80px 80px;
+  }
 
-      .button-container img {
-        width: 180px;
-      }
-    }
+  .button-container {
+    gap: 30px;
+  }
 
-    /* ▼ ローディング画面 */
-    #loading {
-      position: fixed;
-      z-index: 9999;
-      background: black;
-      color: white;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      opacity: 1;
-      animation: fadeOut 1s ease-out 0.3s forwards;
-    }
+  .button-container img {
+    width: 180px;
+  }
+}
 
-    .loading-box {
-      text-align: center;
-      animation: zoomIn 0.8s ease-out;
-    }
+/* ▼ ローディング画面 */
+#loading {
+  position: fixed;
+  z-index: 9999;
+  background: black;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-    .loading-logo {
-      width: 180px;
-      max-width: 80%;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
+.loading-box {
+  text-align: center;
+}
 
-    .loading-text {
-      font-size: 1.3em;
-      color: white;
-    }
+.loading-logo {
+  width: 180px;
+  max-width: 80%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  animation: zoomIn 0.8s ease-out;
+}
 
-    @keyframes zoomIn {
-      0% { transform: scale(0.6); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
+.loading-text {
+  font-size: 1.3em;
+  color: white;
+}
 
-    @keyframes fadeOut {
-      0% { opacity: 1; }
-      100% { opacity: 0; visibility: hidden; }
-    }
+@keyframes zoomIn {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
 
-    /* ▼ メインアニメーション例（おまけ） */
-    .overlay h1 {
-      animation: fadeInUp 1s ease-out 0.4s forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .overlay p {
-      animation: fadeInUp 1s ease-out forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .overlay p:nth-of-type(1) { animation-delay: 0.6s; }
-    .overlay p:nth-of-type(2) { animation-delay: 0.8s; }
-    .overlay p:nth-of-type(3) { animation-delay: 1s; }
-
-    .button-container img {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.8s ease-out forwards;
-    }
-
-    .button-container a:nth-of-type(1) img { animation-delay: 1.2s; }
-    .button-container a:nth-of-type(2) img { animation-delay: 1.4s; }
-    .button-container a:nth-of-type(3) img { animation-delay: 1.6s; }
-    .button-container a:nth-of-type(4) img { animation-delay: 1.8s; }
-
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
   </style>
 </head>
 <body>
@@ -181,29 +144,37 @@
       <img src="logo-god.jpg" class="loading-logo" alt="ローディング画像">
       <div class="loading-text">読み込み中...</div>
     </div>
-  </div>
-
-  <!-- メインコンテンツ -->
-  <div class="overlay">
+  </div>  <!-- メインコンテンツ -->  <div class="overlay">
     <h1>株式会社G.O.D</h1>
     <p>施工実績2000件以上、あらゆるシチュエーションに対応してきた経験を活かし、</p>
     <p>低層住宅を中心に安心・安全な足場をご提供します。</p>
-    <p><strong>―― 神の手による、信頼と実績。</strong></p>
+    <p><strong>―― 神の手による、信頼と実績。</strong></p><div class="button-container">
+  <a href="#company"><img src="btn-company.jpg" loading="lazy" decoding="async" alt="会社情報"></a>
+  <a href="#area"><img src="btn-area.jpg" loading="lazy" decoding="async" alt="施工エリア"></a>
+  <a href="#jirei"><img src="btn-jirei.jpg" loading="lazy" decoding="async" alt="施工事例"></a>
+  <a href="#recruit"><img src="btn-recruit.jpg" loading="lazy" decoding="async" alt="求人情報"></a>
+</div>
 
-    <div class="button-container">
-      <a href="#company"><img src="btn-company.jpg" loading="lazy" decoding="async" alt="会社情報"></a>
-      <a href="#area"><img src="btn-area.jpg" loading="lazy" decoding="async" alt="施工エリア"></a>
-      <a href="#jirei"><img src="btn-jirei.jpg" loading="lazy" decoding="async" alt="施工事例"></a>
-      <a href="#recruit"><img src="btn-recruit.jpg" loading="lazy" decoding="async" alt="求人情報"></a>
-    </div>
+<img class="footer-image" src="company-footer.jpg" loading="lazy" decoding="async" alt="会社フッター画像">
 
-    <img class="footer-image" src="company-footer.jpg" loading="lazy" decoding="async" alt="会社フッター画像">
-  </div>
-
-  <footer>
+  </div>  <footer>
     &copy; 2025 株式会社G.O.D. All rights reserved.
-  </footer>
+  </footer>  <!-- ローディング制御＋アニメーション発火 -->  <script>
+    window.addEventListener('load', function () {
+      const loading = document.getElementById('loading');
+      loading.style.transition = 'opacity 0.6s ease-out';
+      loading.style.opacity = 0;
+      setTimeout(() => {
+        loading.style.display = 'none';
 
-  <!-- JSは不要になったので削除OK -->
-</body>
+        // アニメーション発火
+        document.querySelector('h1').classList.add('fade-in');
+        document.querySelectorAll('p').forEach(el => el.classList.add('fade-in'));
+        document.querySelectorAll('.button-container img').forEach((el, i) => {
+          setTimeout(() => el.classList.add('fade-in'), 200 + i * 200);
+        });
+
+      }, 600);
+    });
+  </script></body>
 </html>
