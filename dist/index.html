@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!DOCTYPE html><html lang="ja">
 <head>
   <meta charset="UTF-8">
   <title>株式会社G.O.D</title>
@@ -13,119 +12,118 @@
       color: white;
       overflow-x: hidden;
       scroll-behavior: smooth;
-    }
+    }body {
+  background-image: url("god-top.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
 
-    body {
-      background-image: url("god-top.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-    }
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  min-height: 100vh;
+  padding: 100px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
 
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.4);
-      min-height: 100vh;
-      padding: 100px 20px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      text-align: center;
-    }
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
 
-    h1 {
-      font-size: 2.4em;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
+p {
+  font-size: 1em;
+  line-height: 1.8;
+  margin: 5px 0;
+}
 
-    p {
-      font-size: 1em;
-      line-height: 1.8;
-      margin: 5px 0;
-    }
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 15px;
+}
 
-    .button-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 30px;
-      gap: 15px;
-    }
+.button-container img {
+  width: 140px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
 
-    .button-container img {
-      width: 140px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    }
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #ccc;
+}
 
-    footer {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #ccc;
-    }
+.footer-image {
+  width: 100%;
+  margin-top: 40px;
+}
 
-    .footer-image {
-      width: 100%;
-      margin-top: 40px;
-    }
+/* 全アニメーション＆トランジション無効化 */
+* {
+  transition: none !important;
+  animation: none !important;
+}
 
-    /* 全アニメーション＆トランジション無効化 */
-    * {
-      transition: none !important;
-      animation: none !important;
-    }
+@media (min-width: 1024px) {
+  body {
+    background-position: center top;
+    background-size: 100% auto;
+  }
 
-    @media (min-width: 1024px) {
-      body {
-        background-position: center top;
-        background-size: 100% auto;
-      }
+  .overlay {
+    padding: 140px 80px 80px;
+  }
 
-      .overlay {
-        padding: 140px 80px 80px;
-      }
+  .button-container {
+    gap: 30px;
+  }
 
-      .button-container {
-        gap: 30px;
-      }
+  .button-container img {
+    width: 180px;
+  }
+}
 
-      .button-container img {
-        width: 180px;
-      }
-    }
+/* ▼ ローディング画面 */
+#loading {
+  position: fixed;
+  z-index: 9999;
+  background: black;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-    /* ▼ ローディング画面 */
-    #loading {
-      position: fixed;
-      z-index: 9999;
-      background: black;
-      color: white;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+.loading-box {
+  text-align: center;
+}
 
-    .loading-box {
-      text-align: center;
-    }
+.loading-logo {
+  width: 180px;
+  max-width: 80%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
 
-    .loading-logo {
-      width: 180px;
-      max-width: 80%;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
+.loading-text {
+  font-size: 1.3em;
+  color: white;
+}
 
-    .loading-text {
-      font-size: 1.3em;
-      color: white;
-    }
   </style>
 </head>
 <body>
@@ -135,35 +133,25 @@
       <img src="logo-god.jpg" class="loading-logo" alt="ローディング画像">
       <div class="loading-text">読み込み中...</div>
     </div>
-  </div>
-
-  <!-- メインコンテンツ -->
-  <div class="overlay">
+  </div>  <!-- メインコンテンツ -->  <div class="overlay">
     <h1>株式会社G.O.D</h1>
     <p>施工実績2000件以上、あらゆるシチュエーションに対応してきた経験を活かし、</p>
     <p>低層住宅を中心に安心・安全な足場をご提供します。</p>
-    <p><strong>―― 神の手による、信頼と実績。</strong></p>
+    <p><strong>―― 神の手による、信頼と実績。</strong></p><div class="button-container">
+  <a href="#company"><img src="btn-company.jpg" loading="lazy" decoding="async" alt="会社情報"></a>
+  <a href="#area"><img src="btn-area.jpg" loading="lazy" decoding="async" alt="施工エリア"></a>
+  <a href="#jirei"><img src="btn-jirei.jpg" loading="lazy" decoding="async" alt="施工事例"></a>
+  <a href="#recruit"><img src="btn-recruit.jpg" loading="lazy" decoding="async" alt="求人情報"></a>
+</div>
 
-    <div class="button-container">
-      <a href="#company"><img src="btn-company.jpg" loading="lazy" decoding="async" alt="会社情報"></a>
-      <a href="#area"><img src="btn-area.jpg" loading="lazy" decoding="async" alt="施工エリア"></a>
-      <a href="#jirei"><img src="btn-jirei.jpg" loading="lazy" decoding="async" alt="施工事例"></a>
-      <a href="#recruit"><img src="btn-recruit.jpg" loading="lazy" decoding="async" alt="求人情報"></a>
-    </div>
+<img class="footer-image" src="company-footer.jpg" loading="lazy" decoding="async" alt="会社フッター画像">
 
-    <img class="footer-image" src="company-footer.jpg" loading="lazy" decoding="async" alt="会社フッター画像">
-  </div>
-
-  <footer>
+  </div>  <footer>
     &copy; 2025 株式会社G.O.D. All rights reserved.
-  </footer>
-
-  <!-- ローディング非表示スクリプト -->
-  <script>
+  </footer>  <!-- ローディング非表示スクリプト -->  <script>
     window.addEventListener('load', function () {
       const loading = document.getElementById('loading');
       if (loading) loading.style.display = 'none';
     });
-  </script>
-</body>
+  </script></body>
 </html>
