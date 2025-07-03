@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="ja">
-<head>
+<!DOCTYPE html><html lang="ja"><head>
   <meta charset="UTF-8">
   <title>株式会社G.O.D</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,148 +11,111 @@
       color: white;
       overflow-x: hidden;
       scroll-behavior: smooth;
-    }body {
-  background-image: url("god-top.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  min-height: 100vh;
-  padding: 100px 20px 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: center;
-}
-
-h1, p, .button-container img, .story h2, .story p {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.fade-in {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-h1 {
-  font-size: 2.4em;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-p {
-  font-size: 1em;
-  line-height: 1.8;
-  margin: 5px 0;
-}
-
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 15px;
-}
-
-.button-container img {
-  width: 140px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-}
-
-.story {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.story h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #ffcc00;
-}
-
-.story p {
-  font-size: 1em;
-  line-height: 1.8;
-  margin: 10px 0;
-  color: #f5f5f5;
-}
-
-footer {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 0.9em;
-  color: #ccc;
-}
-
-.footer-image {
-  width: 100%;
-  margin-top: 40px;
-}
-
-@media (min-width: 1024px) {
-  body {
-    background-position: center top;
-    background-size: 100% auto;
-  }
-
-  .overlay {
-    padding: 140px 80px 80px;
-  }
-
-  .button-container {
-    gap: 30px;
-  }
-
-  .button-container img {
-    width: 180px;
-  }
-}
-
-/* ▼ ローディング画面 */
-#loading {
-  position: fixed;
-  z-index: 9999;
-  background: black;
-  color: white;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.loading-box {
-  text-align: center;
-}
-
-.loading-logo {
-  width: 180px;
-  max-width: 80%;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  animation: zoomIn 0.8s ease-out;
-}
-
-.loading-text {
-  font-size: 1.3em;
-  color: white;
-}
-
-@keyframes zoomIn {
-  0% { transform: scale(0.6); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
+    }
+    body {
+      background-image: url("god-top.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      min-height: 100vh;
+      padding: 100px 20px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: center;
+    }
+    h1, p, .button-container img {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .fade-in {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 1em;
+      line-height: 1.8;
+      margin: 5px 0;
+    }
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 15px;
+    }
+    .button-container img {
+      width: 140px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    .footer-image {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    @media (min-width: 1024px) {
+      body {
+        background-position: center top;
+        background-size: 100% auto;
+      }
+      .overlay {
+        padding: 140px 80px 80px;
+      }
+      .button-container {
+        gap: 30px;
+      }
+      .button-container img {
+        width: 180px;
+      }
+    }
+    #loading {
+      position: fixed;
+      z-index: 9999;
+      background: black;
+      color: white;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .loading-box {
+      text-align: center;
+    }
+    .loading-logo {
+      width: 180px;
+      max-width: 80%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      animation: zoomIn 0.8s ease-out;
+    }
+    .loading-text {
+      font-size: 1.3em;
+      color: white;
+    }
+    @keyframes zoomIn {
+      0% { transform: scale(0.6); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -174,35 +136,20 @@ footer {
   <a href="#recruit"><img src="btn-recruit.jpg" loading="lazy" decoding="async" alt="求人情報"></a>
 </div>
 
-<img class="footer-image" src="company-footer.jpg" loading="lazy" decoding="async" alt="会社フッター画像">
-
-  </div>  <!-- ストーリーセクション -->  <section class="story">
-    <h2>私たちの想い</h2>
-    <p>足場は「安全」を支える土台。私たちはその安全を妥協しません。</p>
-    <p>近隣へのあいさつ・掃除・整理整頓。<br>当たり前のことを、真剣に。</p>
-    <p>G.O.Dは「現場で一番信頼される足場屋」を目指しています。</p>
-  </section>  <footer>
+  </div>  <div class="footer">
     &copy; 2025 株式会社G.O.D. All rights reserved.
-  </footer>  <!-- ローディング制御＋アニメーション発火 -->  <script>
+  </div>  <img class="footer-image" src="company-footer.jpg" loading="lazy" decoding="async" alt="会社フッター画像">  <!-- ローディング制御＋アニメーション発火 -->  <script>
     window.addEventListener('load', function () {
       const loading = document.getElementById('loading');
       loading.style.transition = 'opacity 0.6s ease-out';
       loading.style.opacity = 0;
       setTimeout(() => {
         loading.style.display = 'none';
-
         document.querySelector('h1').classList.add('fade-in');
-        document.querySelectorAll('p').forEach((el, i) => {
-          setTimeout(() => el.classList.add('fade-in'), 600 + i * 300);
-        });
+        document.querySelectorAll('p').forEach(el => el.classList.add('fade-in'));
         document.querySelectorAll('.button-container img').forEach((el, i) => {
-          setTimeout(() => el.classList.add('fade-in'), 1600 + i * 300);
+          setTimeout(() => el.classList.add('fade-in'), 200 + i * 200);
         });
-        document.querySelector('.story h2').classList.add('fade-in');
-        document.querySelectorAll('.story p').forEach((el, i) => {
-          setTimeout(() => el.classList.add('fade-in'), 3000 + i * 300);
-        });
-
       }, 600);
     });
   </script></body>
