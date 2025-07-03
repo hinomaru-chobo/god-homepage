@@ -31,7 +31,6 @@
       flex-direction: column;
       justify-content: flex-start;
       text-align: center;
-      animation: fadeIn 2s ease-in;
     }
 
     h1 {
@@ -59,12 +58,6 @@
       height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
-    }
-
-    .button-container img:hover {
-      transform: scale(1.05);
-      will-change: transform;
     }
 
     footer {
@@ -77,39 +70,14 @@
     .footer-image {
       width: 100%;
       margin-top: 40px;
-      animation: fadeIn 2s ease-out;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    /* 全アニメーション＆トランジション無効化 */
+    * {
+      transition: none !important;
+      animation: none !important;
     }
 
-    /* 画像ボタンの自然な登場アニメーション */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 0.8s ease-out forwards;
-      will-change: opacity, transform;
-    }
-
-    .button-container a:nth-child(1) .fade-in { animation-delay: 0s; }
-    .button-container a:nth-child(2) .fade-in { animation-delay: 0.2s; }
-    .button-container a:nth-child(3) .fade-in { animation-delay: 0.4s; }
-    .button-container a:nth-child(4) .fade-in { animation-delay: 0.6s; }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* PC表示向け調整 */
     @media (min-width: 1024px) {
       body {
         background-position: center top;
@@ -138,10 +106,10 @@
     <p><strong>―― 神の手による、信頼と実績。</strong></p>
 
     <div class="button-container">
-      <a href="#company"><img class="fade-in" src="btn-company.jpg" loading="lazy" decoding="async" alt="会社情報"></a>
-      <a href="#area"><img class="fade-in" src="btn-area.jpg" loading="lazy" decoding="async" alt="施工エリア"></a>
-      <a href="#jirei"><img class="fade-in" src="btn-jirei.jpg" loading="lazy" decoding="async" alt="施工事例"></a>
-      <a href="#recruit"><img class="fade-in" src="btn-recruit.jpg" loading="lazy" decoding="async" alt="求人情報"></a>
+      <a href="#company"><img src="btn-company.jpg" loading="lazy" decoding="async" alt="会社情報"></a>
+      <a href="#area"><img src="btn-area.jpg" loading="lazy" decoding="async" alt="施工エリア"></a>
+      <a href="#jirei"><img src="btn-jirei.jpg" loading="lazy" decoding="async" alt="施工事例"></a>
+      <a href="#recruit"><img src="btn-recruit.jpg" loading="lazy" decoding="async" alt="求人情報"></a>
     </div>
 
     <img class="footer-image" src="company-footer.jpg" loading="lazy" decoding="async" alt="会社フッター画像">
