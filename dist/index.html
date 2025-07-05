@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="ja">
+<!DOCTYPE html>
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <title>株式会社G.O.D</title>
@@ -31,119 +32,129 @@
       font-size: 1.6em;
       text-align: center;
     }
+
     .fade-text {
       opacity: 0;
-      animation: fadeIn 1.5s ease forwards;
+      animation: fadeIn 3s ease forwards;
     }
+
     .fade-text:nth-child(1) { animation-delay: 0s; }
-    .fade-text:nth-child(2) { animation-delay: 2s; }
-    .fade-text:nth-child(3) { animation-delay: 4s; }@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+    .fade-text:nth-child(2) { animation-delay: 5s; }
+    .fade-text:nth-child(3) { animation-delay: 10s; }
 
-.main-content {
-  display: none;
-}
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-body.loaded .loading-screen {
-  display: none;
-}
+    .main-content {
+      display: none;
+    }
 
-body.loaded .main-content {
-  display: block;
-}
+    body.loaded .loading-screen {
+      display: none;
+    }
 
-.overlay {
-  background-image: url("god-top.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll;
-  background-color: rgba(0,0,0,0.5);
-  background-blend-mode: darken;
-  min-height: 100vh;
-  padding: 100px 20px 60px;
-  text-align: center;
-  animation: fadeIn 2s ease-in;
-}
+    body.loaded .main-content {
+      display: block;
+    }
 
-h1 {
-  font-size: 2.4em;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
+    .overlay {
+      background-image: url("god-top.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll;
+      background-color: rgba(0,0,0,0.5);
+      background-blend-mode: darken;
+      min-height: 100vh;
+      padding: 100px 20px 60px;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
 
-p {
-  font-size: 1em;
-  line-height: 1.8;
-  margin: 5px 0;
-}
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
 
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 15px;
-}
+    p {
+      font-size: 1em;
+      line-height: 1.8;
+      margin: 5px 0;
+    }
 
-.button-container img {
-  width: 140px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  transition: transform 0.3s;
-}
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 15px;
+    }
 
-.button-container img:hover {
-  transform: scale(1.05);
-  will-change: transform;
-}
+    .button-container img {
+      width: 140px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
 
-.footer-image {
-  width: 100%;
-  margin-top: 40px;
-  animation: fadeIn 2s ease-out;
-}
+    .button-container img:hover {
+      transform: scale(1.05);
+      will-change: transform;
+    }
 
-footer {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 0.9em;
-  color: #ccc;
-}
+    .footer-image {
+      width: 100%;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-out;
+    }
 
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #ccc;
+    }
   </style>
 </head>
 <body>
+  <!-- ローディング画面 -->
   <div class="loading-screen">
     <div class="fade-text">この足場に、命をのせる。</div>
     <div class="fade-text">仲間と支え合い、築いてきた現場。</div>
     <div class="fade-text">G.O.D ― 現場で一番信頼される足場屋へ</div>
-  </div>  <div class="main-content">
+  </div>
+
+  <!-- メインコンテンツ -->
+  <div class="main-content">
     <div class="overlay">
       <h1>株式会社G.O.D</h1>
       <p>施工実績2000件以上、あらゆるシチュエーションに対応してきた経験を活かし、</p>
       <p>低層住宅を中心に安心・安全な足場をご提供します。</p>
-      <p><strong>―― 神の手による、信頼と実績。</strong></p><div class="button-container">
-    <a href="#company"><img src="btn-company.jpg" loading="lazy" alt="会社情報"></a>
-    <a href="#area"><img src="btn-area.jpg" loading="lazy" alt="施工エリア"></a>
-    <a href="#jirei"><img src="btn-jirei.jpg" loading="lazy" alt="施工事例"></a>
-    <a href="#recruit"><img src="btn-recruit.jpg" loading="lazy" alt="求人情報"></a>
+      <p><strong>―― 神の手による、信頼と実績。</strong></p>
+      <div class="button-container">
+        <a href="#company"><img src="btn-company.jpg" loading="lazy" alt="会社情報"></a>
+        <a href="#area"><img src="btn-area.jpg" loading="lazy" alt="施工エリア"></a>
+        <a href="#jirei"><img src="btn-jirei.jpg" loading="lazy" alt="施工事例"></a>
+        <a href="#recruit"><img src="btn-recruit.jpg" loading="lazy" alt="求人情報"></a>
+      </div>
+      <img class="footer-image" src="company-footer.jpg" loading="lazy" alt="会社フッター画像">
+    </div>
+
+    <footer>
+      &copy; 2025 株式会社G.O.D. All rights reserved.
+    </footer>
   </div>
 
-  <img class="footer-image" src="company-footer.jpg" loading="lazy" alt="会社フッター画像">
-</div>
-
-<footer>
-  &copy; 2025 株式会社G.O.D. All rights reserved.
-</footer>
-
-  </div>  <script>
+  <!-- ローディング制御 -->
+  <script>
     window.addEventListener("load", function() {
       setTimeout(() => {
         document.body.classList.add("loaded");
-      }, 8000); // ローディング画面を8秒表示
+      }, 15000); // 15秒でトップへ
     });
-  </script></body>
+  </script>
+</body>
 </html>
