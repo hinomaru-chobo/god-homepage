@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!DOCTYPE html><html lang="ja">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>株式会社G.O.D</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body, html {
       margin: 0;
@@ -38,6 +37,16 @@
       opacity: 1 !important;
       transform: translateY(0) !important;
       transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 1em;
+      line-height: 1.8;
+      margin: 5px 0;
     }
     .button-container {
       display: flex;
@@ -104,25 +113,24 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      font-size: 1.4em;
+      font-size: 1.5em;
     }
-    .fade-text {
+    .loading-line {
       opacity: 0;
       transition: opacity 1.5s ease;
       margin: 10px 0;
     }
-    .fade-text.show {
+    .show {
       opacity: 1;
     }
   </style>
 </head>
 <body>
   <div id="loading">
-    <div id="line1" class="fade-text">この足場に、命をのせる。</div>
-    <div id="line2" class="fade-text">仲間と支え合い、築いてきた現場。</div>
-    <div id="line3" class="fade-text">G.O.D ― 現場で一番信頼される足場屋へ</div>
+    <div class="loading-line" id="line1">この足場に、命をのせる。</div>
+    <div class="loading-line" id="line2">仲間と支え合い、築いてきた現場。</div>
+    <div class="loading-line" id="line3">G.O.D ― 現場で一番信頼される足場屋へ</div>
   </div>
-
   <div class="overlay">
     <h1>株式会社G.O.D</h1>
     <p>施工実績2000件以上、あらゆるシチュエーションに対応してきた経験を活かし、</p>
@@ -135,7 +143,6 @@
       <a href="#recruit"><img src="btn-recruit.jpg" loading="lazy" decoding="async" alt="求人情報"></a>
     </div>
   </div>
-
   <section class="story">
     <h2>私たちの想い</h2>
     <p>足場は「安全」を支える土台。私たちはその安全を妥協しません。</p>
@@ -146,7 +153,6 @@
   <footer>
     &copy; 2025 株式会社G.O.D. All rights reserved.
   </footer>
-
   <script>
     window.addEventListener('load', function () {
       const lines = [
@@ -154,7 +160,7 @@
         document.getElementById("line2"),
         document.getElementById("line3")
       ];
-      setTimeout(() => lines[0].classList.add("show"), 1000);
+      setTimeout(() => lines[0].classList.add("show"), 0);
       setTimeout(() => lines[1].classList.add("show"), 3000);
       setTimeout(() => lines[2].classList.add("show"), 6000);
       setTimeout(() => {
