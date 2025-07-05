@@ -1,6 +1,9 @@
-<!DOCTYPE html><html lang="ja"><head>  <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
   <title>株式会社G.O.D</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body, html {
       margin: 0;
@@ -35,16 +38,6 @@
       opacity: 1 !important;
       transform: translateY(0) !important;
       transition: opacity 1.5s ease, transform 1.5s ease;
-    }
-    h1 {
-      font-size: 2.4em;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-    p {
-      font-size: 1em;
-      line-height: 1.8;
-      margin: 5px 0;
     }
     .button-container {
       display: flex;
@@ -111,31 +104,25 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      font-size: 1.4em;
     }
-    .loading-box {
-      text-align: center;
+    .fade-text {
+      opacity: 0;
+      transition: opacity 1.5s ease;
+      margin: 10px 0;
     }
-    .loading-logo {
-      width: 180px;
-      max-width: 80%;
-      border-radius: 12px;
-      margin-bottom: 15px;
+    .fade-text.show {
       opacity: 1;
-    }
-    .loading-text {
-      font-size: 1.3em;
-      color: white;
-      transition: opacity 1s ease;
     }
   </style>
 </head>
 <body>
   <div id="loading">
-    <div class="loading-box">
-      <img src="logo-god.jpg" class="loading-logo" alt="ローディング画像">
-      <div id="loading-message" class="loading-text"></div>
-    </div>
+    <div id="line1" class="fade-text">この足場に、命をのせる。</div>
+    <div id="line2" class="fade-text">仲間と支え合い、築いてきた現場。</div>
+    <div id="line3" class="fade-text">G.O.D ― 現場で一番信頼される足場屋へ</div>
   </div>
+
   <div class="overlay">
     <h1>株式会社G.O.D</h1>
     <p>施工実績2000件以上、あらゆるシチュエーションに対応してきた経験を活かし、</p>
@@ -148,6 +135,7 @@
       <a href="#recruit"><img src="btn-recruit.jpg" loading="lazy" decoding="async" alt="求人情報"></a>
     </div>
   </div>
+
   <section class="story">
     <h2>私たちの想い</h2>
     <p>足場は「安全」を支える土台。私たちはその安全を妥協しません。</p>
@@ -158,29 +146,22 @@
   <footer>
     &copy; 2025 株式会社G.O.D. All rights reserved.
   </footer>
+
   <script>
     window.addEventListener('load', function () {
-      const messages = [
-        "この足場に、命をのせる。",
-        "仲間と支え合い、築いてきた現場。",
-        "G.O.D ― 現場で一番信頼される足場屋へ"
+      const lines = [
+        document.getElementById("line1"),
+        document.getElementById("line2"),
+        document.getElementById("line3")
       ];
-      const loading = document.getElementById('loading');
-      const messageBox = document.getElementById('loading-message');let index = 0;
-  const showMessage = () => {
-    if (index < messages.length) {
-      messageBox.style.opacity = 0;
+      setTimeout(() => lines[0].classList.add("show"), 1000);
+      setTimeout(() => lines[1].classList.add("show"), 3000);
+      setTimeout(() => lines[2].classList.add("show"), 6000);
       setTimeout(() => {
-        messageBox.textContent = messages[index++];
-        messageBox.style.opacity = 1;
-      }, 300);
-      setTimeout(showMessage, 2500);
-    } else {
-      setTimeout(() => {
-        loading.style.transition = 'opacity 0.8s ease-out';
-        loading.style.opacity = 0;
+        document.getElementById("loading").style.transition = "opacity 1s ease";
+        document.getElementById("loading").style.opacity = 0;
         setTimeout(() => {
-          loading.style.display = 'none';
+          document.getElementById("loading").style.display = "none";
           document.querySelector('h1').classList.add('fade-in');
           document.querySelectorAll('p').forEach((el, i) => {
             setTimeout(() => el.classList.add('fade-in'), 600 + i * 300);
@@ -192,12 +173,9 @@
           document.querySelectorAll('.story p').forEach((el, i) => {
             setTimeout(() => el.classList.add('fade-in'), 3000 + i * 300);
           });
-        }, 800);
-      }, 2000);
-    }
-  };
-  showMessage();
-});
-
+        }, 1000);
+      }, 8000);
+    });
   </script>
-</body></html>
+</body>
+</html>
